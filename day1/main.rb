@@ -20,9 +20,9 @@ left.count.times do |i|
   raise "input parsing wrong" unless left.count == right.count
   lmin = left.min
   rmin = right.min
-  sum += (lmin - rmin).abs
   left.delete_at(left.index(lmin))
   right.delete_at(right.index(rmin))
+  sum += (lmin - rmin).abs
 end
 
 puts "Result aoc day 1:\n#{sum}"
